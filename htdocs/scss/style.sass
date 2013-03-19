@@ -1,0 +1,48 @@
+/* MY OWN MIXINS
+@import normalize
+
+/* COMPASS MIXINS
+@import compass/css3
+
+/* BASIC SETTINGS
+*
+  +box-sizing(border-box)
+
+p
+  +hyphenation
+  text-align: justify
+
+/* LAYOUT
+.wrapper.main
+  margin: 0 auto
+  width: 960px
+
+header.main
+  padding: 10px 0 0 0
+  .logo
+    float: left
+    img
+      display: block
+  nav.main
+    float: right
+    ul
+      list-style-type: none
+      li
+        float: left
+        a
+          color: #000
+          display: inline-block
+          padding: 0 10px
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+
+.content.main
+  clear: both
+  float: left
+  width: 100%
+
+footer.main
+  background: #000
+  min-height: 200px
+  width: 100%
