@@ -63,6 +63,9 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
       </nav>
     </header>
     <div class="content main">
+      <span class="dev-indicator" id="breakpoint-indicator">Breakpoint:</span><br/>
+      <span class="dev-indicator" id="size-indicator"></span>
+      <div class="clear"></div>
       <?php include_once $content_file; ?>
     </div>
   </div>

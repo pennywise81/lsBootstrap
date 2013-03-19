@@ -1,21 +1,58 @@
-/* MY OWN MIXINS
+// Necolas' great normalize.css
 @import normalize
 
-/* COMPASS MIXINS
+// compass mixins
 @import compass/css3
 
-/* BASIC SETTINGS
-*
-  +box-sizing(border-box)
+// overall html-settings (things not mentioned in normalize.css)
+@import html-settings
 
-p
-  +hyphenation
-  text-align: justify
+// basic gridsystem
+@import grid
 
-/* LAYOUT
+// responsivness for sizes
+@import responsive-sizes
+
+// dev settings
+[class^="box__"]:not(.box__row)
+  background: #efefef
+  border: 4px dashed #ccc
+  color: #696969
+  margin-bottom: 20px
+  padding: 10px
+
+// neat little helper
+.dev-indicator
+  clear: both
+  float: left
+  padding: 10px 10px 10px 0
+
+#breakpoint-indicator
+  position: relative
+  &:after
+    color: red
+    left: 105%
+    position: absolute
+    top: 10px
+    width: 200px
+    +breakpoint(big)
+      content: 'big'
+    +breakpoint(normal)
+      content: 'normal'
+    +breakpoint(small)
+      content: 'small'
+    +breakpoint(smallest)
+      content: 'smallest'
+
+// Layout
+.clear
+  clear: both
+
 .wrapper.main
   margin: 0 auto
-  width: 960px
+  min-width: $min-width
+  width: 100% // if you want the page to be non-responsive, just set a fixed width here
+  max-width: $max-width
 
 header.main
   padding: 10px 0 0 0
