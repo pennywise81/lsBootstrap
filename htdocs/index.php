@@ -66,7 +66,6 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
       <?php include_once $content_file; ?>
     </div>
   </div>
-  <footer class="main"></footer>
   <script src="js/init.js"></script>
 </body>
 </html>
