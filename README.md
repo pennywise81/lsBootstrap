@@ -11,13 +11,13 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-> Switched from SCSS to SASS
-> Implemented basic grid system
-> Implemented responsive breakpoints for different devices
+* Switched from SCSS to SASS
+* Implemented basic grid system
+* Implemented responsive breakpoints for different devices
 
 #### Upcoming in the next update
 
-> outsourced font-definitions
-> outsourced colors
-> responsive menu
-> a Logo
+* outsourced font-definitions
+* outsourced colors
+* responsive menu
+* a Logo
