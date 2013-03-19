@@ -40,7 +40,7 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
 
   <title><?php echo $title; ?></title>
 
-  <link rel="stylesheet" href="/style/style.css" />
+  <link rel="stylesheet" href="style/style.css" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <!--[if IE]>
@@ -67,7 +67,7 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
     </div>
   </div>
   <footer class="main"></footer>
-  <script src="/js/init.js"></script>
-  <script src="/js/stickyFooter.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/stickyFooter.js"></script>
 </body>
 </html>
