@@ -68,6 +68,5 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
   </div>
   <footer class="main"></footer>
   <script src="js/init.js"></script>
-  <script src="js/stickyFooter.js"></script>
 </body>
 </html>
