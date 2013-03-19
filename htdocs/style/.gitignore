@@ -1,0 +1,2 @@
+# ignoring style.css, file is dependency of the sass-files
+style.css
