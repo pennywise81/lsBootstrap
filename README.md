@@ -9,15 +9,16 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-'Version 1.1.2'
+**Version 1.1.2**
 
-* Switched from SCSS to SASS
-* Implemented basic grid system
-* Implemented responsive breakpoints for different devices
+- [x] relocated SASS-partials to an own directory
+- [x] Switched from SCSS to SASS
+- [x] Implemented basic grid system
+- [x] Implemented responsive breakpoints for different devices
 
 #### Upcoming features in the next version
 
-* outsourced font-definitions
-* outsourced colors
-* responsive menu
-* a Logo
+- [ ] outsourced font-definitions
+- [ ] outsourced colors
+- [ ] responsive menu
+- [ ] a Logo
