@@ -7,10 +7,13 @@ I'm very sorry, but at this time there's no documentation available (and
 probably never will be). But the code should be pretty self-explanatory. If not,
 don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
+Take a look at [the example] (htdocs/example.html)!
+
 #### Changelog
 
-**Version 1.1.2**
+**Version 1.2.1 March 21, 2013**
 
+- [x] transfered color-definitions
 - [x] relocated SASS-partials to an own directory
 - [x] Switched from SCSS to SASS
 - [x] Implemented basic grid system
@@ -18,7 +21,6 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Upcoming features in the next version
 
-- [ ] outsourced font-definitions
-- [ ] outsourced colors
+- [ ] transfered font-definitions
 - [ ] responsive menu
 - [ ] a Logo

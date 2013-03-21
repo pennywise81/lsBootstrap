@@ -2,7 +2,7 @@
 
 $base-size: 8.333%
 
-[class^="box__"], [class^="skip__"]
+[class*="box__"], [class*="skip__"]
   float: left
 
 // definde semantical box-sizes
@@ -34,7 +34,7 @@ $base-size: 8.333%
     margin-left: $base-size * $i
 
 // last not least, push all boxes to full-width on small screens
-[class^="box__"], [class^="skip__"]
+[class*="box__"], [class*="skip__"]
   +breakpoint(small)
     margin: 0
     width: 100%

@@ -13,6 +13,12 @@
 // responsivness for sizes
 @import partials/responsive-sizes
 
+// color definitions
+@import partials/color-definitions
+
+// helping classes (clearfix etc)
+@import partials/helping-classes
+
 // dev settings
 [class^="box__"]:not(.box__row)
   background: #efefef
@@ -53,6 +59,7 @@
   min-width: $min-width
   width: 100% // if you want the page to be non-responsive, just set a fixed width here
   max-width: $max-width
+  padding-bottom: 70px
 
 header.main
   padding: 10px 0 0 0
@@ -78,3 +85,67 @@ header.main
   clear: both
   float: left
   width: 100%
+
+.colordefinitions
+  [class*="color__groups"]
+    [class*="color__color"]
+      font-family: monospace
+      font-size: 10px
+      height: 25px
+      line-height: 25px
+      text-align: center
+
+.color__color--1
+  background: $body-color-lighter
+
+.color__color--2
+  background: $body-color-light
+
+.color__color--3
+  background: $body-color
+
+.color__color--4
+  background: $body-color-dark
+
+.color__color--5
+  background: $body-color-darker
+
+.color__color--6
+  background: $copy-color-lighter
+  color: #fff
+
+.color__color--7
+  background: $copy-color-light
+  color: #fff
+
+.color__color--8
+  background: $copy-color
+  color: #fff
+
+.color__color--9
+  background: $copy-color-dark
+  color: #fff
+
+.color__color--10
+  background: $copy-color-darker
+  color: #fff
+
+.color__color--11
+  background: $brand-color-lighter
+  color: #fff
+
+.color__color--12
+  background: $brand-color-light
+  color: #fff
+
+.color__color--13
+  background: $brand-color
+  color: #fff
+
+.color__color--14
+  background: $brand-color-dark
+  color: #fff
+
+.color__color--15
+  background: $brand-color-darker
+  color: #fff
