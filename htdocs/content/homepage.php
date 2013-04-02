@@ -1,5 +1,5 @@
 <h1>lsBootstrap</h1>
-<h2>simple framework for building websites</h2>
+<h2>A simple framework for building websites</h2>
 
 <p>
   lsBootstrap is a frontend-framework which I use to build websites. It is under

@@ -1,10 +1,14 @@
 <?php
 
 $paramstring = $_SERVER["REQUEST_URI"];
+
 $paramstring = '/' == substr($paramstring, 0, 1) ?
   substr($paramstring, 1) : $paramstring;
 $paramstring = '/' == substr($paramstring, -1, 1) ?
   substr($paramstring, 0, strlen($paramstring) - 1) : $paramstring;
+
+$paramstring = preg_replace('/([^?]*)(\?.*)*/', '$1', $paramstring);
+
 $params = strlen($paramstring) == 0 ? array() : explode('/', $paramstring);
 
 $content_name = false === empty($params[0]) ? $params[0] : 'homepage';
@@ -40,7 +44,7 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
 
   <title><?php echo $title; ?></title>
 
-  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="/style/style.css" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <!--[if IE]>
@@ -69,6 +73,6 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
       <?php include_once $content_file; ?>
     </div>
   </div>
-  <script src="js/init.js"></script>
+  <script src="/js/init.js"></script>
 </body>
 </html>
