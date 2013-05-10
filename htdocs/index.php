@@ -1,19 +1,17 @@
 <?php
 
-$paramstring = $_SERVER["REQUEST_URI"];
+header('Content-Type: text/html; charset=utf-8');
 
+$paramstring = $_SERVER["REQUEST_URI"];
 $paramstring = '/' == substr($paramstring, 0, 1) ?
   substr($paramstring, 1) : $paramstring;
 $paramstring = '/' == substr($paramstring, -1, 1) ?
   substr($paramstring, 0, strlen($paramstring) - 1) : $paramstring;
-
 $paramstring = preg_replace('/([^?]*)(\?.*)*/', '$1', $paramstring);
-
 $params = strlen($paramstring) == 0 ? array() : explode('/', $paramstring);
 
 $content_name = false === empty($params[0]) ? $params[0] : 'homepage';
 $subcontent_name = false === empty($params[1]) ? $params[1] : '';
-
 $content_file = 'content/' . $content_name;
 if (false === empty($subcontent_name))
 {
@@ -23,7 +21,6 @@ else
 {
   $content_file .= '.php';
 }
-
 if (false === is_file($content_file)) $content_file = 'content/404.php';
 
 $titles = array(
@@ -31,25 +28,41 @@ $titles = array(
   '404' => 'Error'
 );
 
-$title = 'Project Name ' . (false === empty($titles[$content_name]) ?
+$title = 'Project Name' . (false === empty($titles[$content_name]) ?
   ' | ' . $titles[$content_name] : '');
 
-if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
+function outputCallback($inputBuffer)
 {
-  ob_start("ob_gzhandler");
+  $search = array(
+    '/\>[^\S ]+/s', //strip whitespaces after tags, except space
+    '/[^\S ]+\</s', //strip whitespaces before tags, except space
+    '/(\s)+/s'  // shorten multiple whitespace sequences
+  );
+  $replace = array('>', '<', '\\1');
+
+  $blocks = preg_split('/(<\/?pre[^>]*>)/', $inputBuffer, null, PREG_SPLIT_DELIM_CAPTURE);
+
+  $outputBuffer = '';
+
+  foreach($blocks as $i => $block)
+  {
+    if($i % 4 == 2)
+      $outputBuffer .= $block; //break out <pre>...</pre> with \n's
+    else
+      $outputBuffer .= preg_replace($search, $replace, $block);
+  }
+  return $outputBuffer;
 }
-else
-{
-  ob_start();
-}
+
+ob_start('outputCallback');
 
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="Lars Schweisthal" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 maximum-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="author" content="Lars Schweisthal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 maximum-scale=1.0">
 
   <title><?php echo $title; ?></title>
 
@@ -81,9 +94,11 @@ else
       <?php include_once $content_file; ?>
     </div>
   </div>
-  <script defer async src="/min/?f=js/jquery-2.0.0.min.js,js/init.js"></script>
+  <script defer async src="/min/f=js/jquery-2.0.0.min.js,js/init.js"></script>
 </body>
 </html>
 <?php
+
+ob_end_flush();
 
 ?>

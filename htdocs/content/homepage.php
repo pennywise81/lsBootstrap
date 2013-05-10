@@ -12,6 +12,34 @@
   <br/>
 </p>
 
+<p>
+  Just some code output:
+</p>
+
+<pre>
+  &lt;div class=&quot;box__full&quot;&gt;Full&lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__half&quot;&gt;Half&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__third&quot;&gt;Third&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__fourth&quot;&gt;Fourth&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__1&quot;&gt;One&lt;/div&gt;
+    &lt;div class=&quot;box__6&quot;&gt;Six&lt;/div&gt;
+    &lt;div class=&quot;box__5&quot;&gt;Five&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__2&quot;&gt;Two&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box__row&quot;&gt;
+    &lt;div class=&quot;box__6 skip__3&quot;&gt;Six, skips three&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
 <h3>Basic grid system</h3>
 
 <div class="box__full">Full</div>
