@@ -34,6 +34,15 @@ $titles = array(
 $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
   ' | ' . $titles[$content_name] : '');
 
+if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
+{
+  ob_start("ob_gzhandler");
+}
+else
+{
+  ob_start();
+}
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -46,7 +55,6 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
 
   <link rel="stylesheet" href="/style/style.css" />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <!--[if IE]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -55,7 +63,7 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
   <div class="wrapper main cf">
     <header class="main">
       <a href="/" class="logo">
-        <img src="/img/logo.png" alt="Logo">
+        <img src="/img/logo.png" alt="Logo" width="140" height="90">
       </a>
       <nav class="main">
         <ul>
@@ -73,6 +81,9 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
       <?php include_once $content_file; ?>
     </div>
   </div>
-  <script src="/js/init.js"></script>
+  <script defer async src="/min/?f=js/jquery-2.0.0.min.js,js/init.js"></script>
 </body>
 </html>
+<?php
+
+?>

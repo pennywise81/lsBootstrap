@@ -9,8 +9,10 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-**Version 1.2.5 May 10, 2013**
+**Version 1.2.6 May 10, 2013**
 
+- [x] added jQuery 2
+- [x] added left/right floats
 - [x] gzipped output added
 - [x] enabled Leverage Browser Caching
 - [x] a Logo in Comic Sans :-)
