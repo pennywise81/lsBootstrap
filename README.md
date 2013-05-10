@@ -9,8 +9,9 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-**Version 1.2.2 April 02, 2013**
+**Version 1.2.3 May 10, 2013**
 
+- [x] a Logo in Comic Sans :-)
 - [x] transfered color-definitions
 - [x] relocated SASS-partials to an own directory
 - [x] Switched from SCSS to SASS
@@ -21,4 +22,3 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 - [ ] transfered font-definitions
 - [ ] responsive menu
-- [ ] a Logo
