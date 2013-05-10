@@ -9,8 +9,9 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-**Version 1.2.4 May 10, 2013**
+**Version 1.2.5 May 10, 2013**
 
+- [x] gzipped output added
 - [x] enabled Leverage Browser Caching
 - [x] a Logo in Comic Sans :-)
 - [x] transfered color-definitions
