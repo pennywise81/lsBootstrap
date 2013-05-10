@@ -9,8 +9,9 @@ don't hesitate to contact me over at [my homepage] (http://larsschweisthal.de/).
 
 #### Changelog
 
-**Version 1.2.6 May 10, 2013**
+**Version 1.3.0 May 10, 2013**
 
+- [x] new minor version; added minify (https://code.google.com/p/minify/)
 - [x] added jQuery 2
 - [x] added left/right floats
 - [x] gzipped output added
