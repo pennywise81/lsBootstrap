@@ -55,7 +55,7 @@ $title = 'Project Name ' . (false === empty($titles[$content_name]) ?
   <div class="wrapper main cf">
     <header class="main">
       <a href="/" class="logo">
-        <img src="http://placekitten.com/g/140/90" alt="Logo">
+        <img src="/img/logo.png" alt="Logo">
       </a>
       <nav class="main">
         <ul>
